@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EBFAE80E-7F79-444D-814A-1BAF2E7E914F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>XiaoHuHouTai</RootNamespace>
+    <AssemblyName>XiaoHuHouTai</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common.cs" />
+    <Compile Include="DBHelper.cs" />
+    <Compile Include="HouTai\Frm_SecretGuard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HouTai\Frm_SecretGuard.Designer.cs">
+      <DependentUpon>Frm_SecretGuard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HouTai\Frm_Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HouTai\Frm_Admin.Designer.cs">
+      <DependentUpon>Frm_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HouTai\Frm_ChangeSecret.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HouTai\Frm_ChangeSecret.Designer.cs">
+      <DependentUpon>Frm_ChangeSecret.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HouTai\Frm_MovieManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HouTai\Frm_MovieManage.Designer.cs">
+      <DependentUpon>Frm_MovieManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HouTai\Frm_MovieType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HouTai\Frm_MovieType.Designer.cs">
+      <DependentUpon>Frm_MovieType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HouTai\Frm_Sign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HouTai\Frm_Sign.Designer.cs">
+      <DependentUpon>Frm_Sign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HouTai\Frm_UserManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HouTai\Frm_UserManage.Designer.cs">
+      <DependentUpon>Frm_UserManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="HouTai\Frm_SecretGuard.resx">
+      <DependentUpon>Frm_SecretGuard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HouTai\Frm_Admin.resx">
+      <DependentUpon>Frm_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HouTai\Frm_ChangeSecret.resx">
+      <DependentUpon>Frm_ChangeSecret.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HouTai\Frm_MovieManage.resx">
+      <DependentUpon>Frm_MovieManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HouTai\Frm_MovieType.resx">
+      <DependentUpon>Frm_MovieType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HouTai\Frm_Sign.resx">
+      <DependentUpon>Frm_Sign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HouTai\Frm_UserManage.resx">
+      <DependentUpon>Frm_UserManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\activity_bg_wash.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
